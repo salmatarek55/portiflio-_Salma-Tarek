@@ -557,7 +557,7 @@ h2 i {
 
 
 .nav_cont.active {
-    display: flex !important;
+    display: flex ;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -602,8 +602,8 @@ h2 i {
     }
     
     .navbar {
-        grid-template-columns: 1fr auto !important;
-        padding: 15px 20px !important;
+        grid-template-columns: 1fr auto ;
+        padding: 15px 20px ;
     }
     
     .socialicons {
@@ -611,7 +611,7 @@ h2 i {
     }
     
     .navbar.active {
-        grid-template-columns: 1fr auto !important;
+        grid-template-columns: 1fr auto;
     }
     
     .navbar.active .socialicons {
@@ -620,4 +620,5 @@ h2 i {
         justify-content: center;
         margin-top: 20px;
     }
+
 }
