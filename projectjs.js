@@ -33,6 +33,7 @@ function type() {
     if (j === text[i].length) {
       isDeleting = true;
       setTimeout(type, 1200);
+      return;
     } else if (isDeleting && j === 0) {
       isDeleting = false;
       i = (i + 1) % text.length;

@@ -3,11 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 
 body {
   font-family: Arial, sans-serif;
   background:#111;
   color: white;
+    overflow-x: hidden;
 }
 section {
     padding: 60px 20px;
@@ -199,7 +203,7 @@ h2 i {
 .resume-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 30px;
+    gap: 25px;
     margin-top: 30px;
 }
 
@@ -213,7 +217,7 @@ h2 i {
 }
 
 .resume-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .resume-item h4 {
@@ -235,6 +239,21 @@ h2 i {
 .resume-item i {
     margin-right: 6px;
     color: #3498db;
+}
+/* to make space between soft, technical skills */
+.resume-item + .resume-item {
+    margin-top: 20px;  
+}
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .resume-item {
+    text-align: center; 
+    padding: 15px;
+  }
 }
 
 .portfolio {
@@ -420,7 +439,12 @@ h2 i {
   margin-bottom: 15px;
 }
 
-
+@media (max-width: 768px) {
+  .get-in-touch {
+    text-align: center;      
+    padding: 20px;           
+  }
+}
 
 #contact form textarea {
   grid-column: span 2; 
@@ -557,7 +581,7 @@ h2 i {
 
 
 .nav_cont.active {
-    display: flex ;
+    display: flex !important;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -602,8 +626,8 @@ h2 i {
     }
     
     .navbar {
-        grid-template-columns: 1fr auto ;
-        padding: 15px 20px ;
+        grid-template-columns: 1fr auto !important;
+        padding: 15px 20px !important;
     }
     
     .socialicons {
@@ -611,7 +635,7 @@ h2 i {
     }
     
     .navbar.active {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr auto !important;
     }
     
     .navbar.active .socialicons {
@@ -620,5 +644,4 @@ h2 i {
         justify-content: center;
         margin-top: 20px;
     }
-
 }
